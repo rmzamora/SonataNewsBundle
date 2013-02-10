@@ -25,7 +25,7 @@
     "require": {
         "symfony/symfony": "2.1.*",
         "rmzamora/admin-bundle": "dev-rmzamora-master",
-        "sonata-project/user-bundle": "dev-master",
+        "rmzamora/user-bundle": "dev-rmzamora-master",
         "rmzamora/media-bundle": "dev-rmzamora-master",
         "sonata-project/formatter-bundle": "dev-master",
         "sonata-project/easy-extends-bundle": "dev-master",
