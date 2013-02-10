@@ -1,11 +1,16 @@
 {
-    "name": "sonata-project/news-bundle",
+    "name": "rmzamora/news-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony SonataNewsBundle",
-    "keywords": ["blog", "sonata", "news", "post"],
+    "description": "Symfony SonataNewsBundle, rmzamora forked",
+    "keywords": ["blog", "sonata", "news", "post", "rmzamora forked"],
     "homepage": "http://sonata-project.org/bundles/news",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Mell M. Zamora",
+            "email": "me@mellzamora.com",
+            "homepage": "http://mellzamora.com"
+        },    
         {
             "name": "Thomas Rabaix",
             "email": "thomas.rabaix@sonata-project.org",
@@ -19,9 +24,9 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/symfony": "2.1.*",
-        "sonata-project/admin-bundle": "dev-master",
+        "rmzamora/admin-bundle": "dev-rmzamora-master",
         "sonata-project/user-bundle": "dev-master",
-        "sonata-project/media-bundle": "dev-master",
+        "rmzamora/media-bundle": "dev-rmzamora-master",
         "sonata-project/formatter-bundle": "dev-master",
         "sonata-project/easy-extends-bundle": "dev-master",
         "sonata-project/intl-bundle": "dev-master"
