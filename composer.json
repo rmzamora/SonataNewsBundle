@@ -10,7 +10,7 @@
             "name": "Mell M. Zamora",
             "email": "me@mellzamora.com",
             "homepage": "http://mellzamora.com"
-        },    
+        },
         {
             "name": "Thomas Rabaix",
             "email": "thomas.rabaix@sonata-project.org",
@@ -24,7 +24,7 @@
     "require": {
         "symfony/symfony": "2.1.*",
         "sonata-project/admin-bundle": "2.1.*@dev",
-        "sonata-project/user-bundle": "2.1.*@dev",
+        "rmzamora/user-bundle": "dev-rmzamora-master",
         "sonata-project/media-bundle": "2.1.*@dev",
         "sonata-project/formatter-bundle": "2.1.*",
         "sonata-project/easy-extends-bundle": "2.1.*",
