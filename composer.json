@@ -46,7 +46,7 @@
     "target-dir": "Sonata/NewsBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-stable",
+            "dev-master": "2.1.1-dev",
             "dev-rmzamora-master": "2.1.x-dev"
         }
     }
