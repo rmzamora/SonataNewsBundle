@@ -48,10 +48,6 @@
         {
             "type": "git",
             "url":  "https://github.com/rmzamora/SonataUserBundle.git"
-        },
-        {
-            "type": "git",
-            "url":  "https://github.com/rmzamora/SonataFormatterBundle.git"
         }
     ],
     "extra": {
