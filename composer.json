@@ -22,23 +22,23 @@
         }
     ],
     "require": {
-        "symfony/symfony": "2.1.*",
-        "sonata-project/admin-bundle": "2.1.*@dev",
-        "rmzamora/user-bundle":  "2.1.*@dev",
-        "sonata-project/media-bundle": "2.1.*@dev",
-        "sonata-project/formatter-bundle": "2.1.*",
-        "sonata-project/easy-extends-bundle": "2.1.*",
-        "sonata-project/intl-bundle": "2.1.*"
+        "symfony/symfony": "2.2.*",
+        "sonata-project/admin-bundle": "2.2.*@dev",
+        "rmzamora/user-bundle":  "2.2.*@dev",
+        "sonata-project/media-bundle": "2.2.*@dev",
+        "sonata-project/formatter-bundle": "2.2.*",
+        "sonata-project/easy-extends-bundle": "2.2.*",
+        "sonata-project/intl-bundle": "2.2.*"
     },
     "require-dev": {
         "doctrine/orm": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
         "sonata-project/block-bundle": "2.1.*@dev",
-        "sonata-project/notification-bundle": "2.1.*@dev"
+        "sonata-project/notification-bundle": "2.2.*@dev"
     },
     "suggest": {
-        "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev",
-        "sonata-project/notification-bundle": "2.1.*"
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
+        "sonata-project/notification-bundle": "2.2.*"
     },
     "autoload": {
         "psr-0": { "Sonata\\NewsBundle": "" }
@@ -46,8 +46,8 @@
     "target-dir": "Sonata/NewsBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.1-dev",
-            "dev-rmzamora-master": "2.1.x-dev"
+            "dev-2.1": "2.1.x-dev",
+            "dev-rmzamora-master": "2.2.x-dev"
         }
     }
 }
