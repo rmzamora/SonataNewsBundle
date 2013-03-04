@@ -27,8 +27,8 @@
         "rmzamora/user-bundle":  "2.2.*@dev",
         "sonata-project/media-bundle": "2.2.*@dev",
         "rmzamora/formatter-bundle": "2.2.*",
-        "rmzamora/easy-extends-bundle": "2.2.*",
-        "sonata-project/intl-bundle": "2.2.*"
+        "sonata-project/easy-extends-bundle": "2.1.*@dev",
+        "sonata-project/intl-bundle": "2.1.*@dev"
     },
     "require-dev": {
         "doctrine/orm": "*",
@@ -52,10 +52,6 @@
         {
             "type": "git",
             "url":  "https://github.com/rmzamora/SonataFormatterBundle.git"
-        },
-        {
-            "type": "git",
-            "url":  "https://github.com/rmzamora/SonataEasyExtendsBundle.git"
         }
     ],
     "extra": {
