@@ -26,14 +26,14 @@
         "sonata-project/admin-bundle": "2.2.*@dev",
         "rmzamora/user-bundle":  "2.2.*@dev",
         "sonata-project/media-bundle": "2.2.*@dev",
-        "sonata-project/formatter-bundle": "2.2.*",
-        "sonata-project/easy-extends-bundle": "2.2.*",
+        "rmzamora/formatter-bundle": "2.2.*",
+        "rmzamora/easy-extends-bundle": "2.2.*",
         "sonata-project/intl-bundle": "2.2.*"
     },
     "require-dev": {
         "doctrine/orm": "*",
         "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "sonata-project/block-bundle": "2.1.*@dev",
+        "sonata-project/block-bundle": "2.2.*@dev",
         "sonata-project/notification-bundle": "2.2.*@dev"
     },
     "suggest": {
@@ -44,6 +44,20 @@
         "psr-0": { "Sonata\\NewsBundle": "" }
     },
     "target-dir": "Sonata/NewsBundle",
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "https://github.com/rmzamora/SonataUserBundle.git"
+        },
+        {
+            "type": "git",
+            "url":  "https://github.com/rmzamora/SonataFormatterBundle.git"
+        },
+        {
+            "type": "git",
+            "url":  "https://github.com/rmzamora/SonataEasyExtendsBundle.git"
+        }
+    ],
     "extra": {
         "branch-alias": {
             "dev-2.1": "2.1.x-dev",
