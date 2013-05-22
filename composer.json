@@ -33,13 +33,13 @@
     },
     "require-dev": {
         "doctrine/orm": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "sonata-project/block-bundle": "2.2.*@dev",
-        "sonata-project/notification-bundle": "2.2.*@dev"
+        "rmzamora/doctrine-orm-admin-bundle": "2.2.*@dev",
+        "rmzamora/block-bundle": "2.2.*@dev",
+        "rmzamora/notification-bundle": "2.2.*@dev"
     },
     "suggest": {
-        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "sonata-project/notification-bundle": "2.*"
+        "rmzamora/doctrine-orm-admin-bundle": "2.2.*@dev",
+        "rmzamora/notification-bundle": "2.*"
     },
     "autoload": {
         "psr-0": { "Sonata\\NewsBundle": "" }
