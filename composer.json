@@ -47,8 +47,8 @@
     "target-dir": "Sonata/NewsBundle",
     "extra": {
         "branch-alias": {
-            "dev-2.1": "2.1.x-dev",
-            "dev-master": "2.2.x-dev"
+            "dev-2.2": "2.2.x-dev",
+            "dev-master": "2.3.x-dev"
         }
     }
 }
