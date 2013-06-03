@@ -21,15 +21,15 @@
             "homepage": "https://github.com/sonata-project/SonataNewsBundle/contributors"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "symfony/symfony": "2.2.*",
         "rmzamora/admin-bundle": "2.2.*@dev",
         "rmzamora/user-bundle":  "2.2.*@dev",
         "rmzamora/media-bundle": "2.2.*@dev",
-        "rmzamora/formatter-bundle": "2.2.*@dev",
+        "rmzamora/formatter-bundle": "2.3.*@dev",
         "sonata-project/easy-extends-bundle": "2.1.*",
         "sonata-project/intl-bundle": "2.2.*@dev",
-        "knplabs/knp-menu-bundle": "2.0.*@dev"
     },
     "require-dev": {
         "doctrine/orm": "*",
