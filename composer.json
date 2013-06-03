@@ -29,7 +29,7 @@
         "rmzamora/media-bundle": "2.2.*@dev",
         "rmzamora/formatter-bundle": "2.3.*@dev",
         "sonata-project/easy-extends-bundle": "2.1.*",
-        "sonata-project/intl-bundle": "2.2.*@dev",
+        "sonata-project/intl-bundle": "2.2.*@dev"
     },
     "require-dev": {
         "doctrine/orm": "*",
