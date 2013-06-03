@@ -24,22 +24,18 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/symfony": ">=2.3,<2.4-dev",
-        "rmzamora/admin-bundle": "2.2.*@dev",
-        "rmzamora/user-bundle":  "2.2.*@dev",
-        "rmzamora/media-bundle": "2.2.*@dev",
+        "rmzamora/admin-bundle": "2.3.*@dev",
+        "rmzamora/user-bundle":  "2.3.*@dev",
+        "rmzamora/media-bundle": "2.3.*@dev",
         "rmzamora/formatter-bundle": "2.3.*@dev",
         "sonata-project/easy-extends-bundle": "2.1.*",
         "sonata-project/intl-bundle": "2.2.*@dev"
     },
     "require-dev": {
         "doctrine/orm": "*",
-        "rmzamora/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "rmzamora/block-bundle": "2.2.*@dev",
-        "rmzamora/notification-bundle": "2.2.*@dev"
-    },
-    "suggest": {
-        "rmzamora/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "rmzamora/notification-bundle": "2.*"
+        "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
+        "rmzamora/block-bundle": "2.3.*@dev",
+        "rmzamora/notification-bundle": "2.3.*@dev"
     },
     "autoload": {
         "psr-0": { "Sonata\\NewsBundle": "" }
