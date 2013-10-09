@@ -11,7 +11,8 @@
 
 namespace Sonata\NewsBundle\Model;
 
-use Sonata\NewsBundle\Model\CategoryInterface;
+use Sonata\ClassificationBundle\Model\CollectionInterface;
+use Sonata\ClassificationBundle\Model\TagInterface;
 
 interface PostInterface
 {
@@ -155,7 +156,7 @@ interface PostInterface
     /**
      * Add tags
      *
-     * @param \Sonata\NewsBundle\Model\TagInterface $tags
+     * @param \Sonata\ClassificationBundle\Model\TagInterface $tags
      */
     public function addTags(TagInterface $tags);
 
@@ -267,14 +268,33 @@ interface PostInterface
     public function getAuthor();
 
     /**
-     * @return \Sonata\NewsBundle\Model\CategoryInterface
+     * @return \Sonata\ClassificationBundle\Model\CollectionInterface
      */
-    public function getCategory();
+    public function getCollection();
 
     /**
-     * @param CategoryInterface $category
-     *
-     * @return void
+     * @param CollectionInterface $collection
      */
-    public function setCategory(CategoryInterface $category = null);
+    public function setCollection(CollectionInterface $collection = null);
+
+
+    /**
+     * @param string $contentFormatter
+     */
+    public function setContentFormatter($contentFormatter);
+
+    /**
+     * @return string
+     */
+    public function getContentFormatter();
+
+    /**
+     * @param string $rawContent
+     */
+    public function setRawContent($rawContent);
+
+    /**
+     * @return string
+     */
+    public function getRawContent();
 }
