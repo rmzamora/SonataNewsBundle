@@ -32,6 +32,7 @@ Installation
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
             new Sonata\FormatterBundle\SonataFormatterBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -97,7 +98,7 @@ Installation
             small: { width: 150 , quality: 95}
             big:   { width: 500 , quality: 90}
 
-* create configuration file sonata_formater.yml the text formatters available for your blog post::
+* create configuration file sonata_formatter.yml the text formatters available for your blog post::
 
 .. code-block:: yaml
 
