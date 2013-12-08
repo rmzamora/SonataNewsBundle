@@ -34,9 +34,9 @@
     },
     "require-dev": {
         "doctrine/orm": "*",
-        "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
-        "rmzamora/block-bundle": "2.3.*@dev",
-        "rmzamora/notification-bundle": "2.3.*@dev"
+        "rmzamora/doctrine-orm-admin-bundle": "~2.3",
+        "rmzamora/block-bundle": "~2.3",
+        "rmzamora/notification-bundle": "~2.3"
     },
     "autoload": {
         "psr-0": { "Sonata\\NewsBundle": "" }
