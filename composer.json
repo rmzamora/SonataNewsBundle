@@ -23,7 +23,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/symfony": ">=2.3,<2.4-dev",
+        "symfony/symfony": "~2.3",
+        "sonata-project/core-bundle": "~2.2",
         "rmzamora/admin-bundle": "~2.3",
         "rmzamora/user-bundle":  "~2.3",
         "rmzamora/media-bundle": "~2.3",
