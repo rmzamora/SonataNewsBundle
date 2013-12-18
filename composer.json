@@ -30,7 +30,7 @@
         "rmzamora/media-bundle": "~2.3",
         "rmzamora/formatter-bundle": "~2.3",
         "rmzamora/classification-bundle": "~2.3",
-        "sonata-project/easy-extends-bundle": "2.1.*",
+        "sonata-project/easy-extends-bundle": "~2.1",
         "sonata-project/intl-bundle": "~2.1"
     },
     "require-dev": {
