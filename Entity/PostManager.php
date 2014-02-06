@@ -10,21 +10,22 @@
  */
 namespace Sonata\NewsBundle\Entity;
 
-use Sonata\CoreBundle\Entity\DoctrineBaseManager;
-use Sonata\NewsBundle\Model\PostInterface;
-use Sonata\NewsBundle\Model\BlogInterface;
-
+use Doctrine\ORM\Query\Expr\Join;
 use Sonata\DoctrineORMAdminBundle\Datagrid\Pager;
 use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
+use Sonata\NewsBundle\Model\BlogInterface;
+use Sonata\NewsBundle\Model\PostManager as BasePostManager;
 
-use Doctrine\ORM\NoResultException;
-use Doctrine\ORM\Query\Expr;
-
-use Sonata\ClassificationBundle\Model\CollectionInterface;
-use Doctrine\ORM\Query;
-
-class PostManager extends DoctrineBaseManager
+class PostManager extends BasePostManager
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function getConnection()
+    {
+        return $this->om->getConnection();
+    }
+
     /**
      * @param string                                 $permalink
      * @param \Sonata\NewsBundle\Model\BlogInterface $blog
@@ -80,18 +81,7 @@ class PostManager extends DoctrineBaseManager
     }
 
     /**
-     * Retrieve posts, based on the criteria, a page at a time.
-     * Valid criteria are:
-     *    enabled - boolean
-     *    date - query
-     *    tag - string
-     *    author - 'NULL', 'NOT NULL', id, array of ids
-     *
-     * @param array   $criteria
-     * @param integer $page
-     * @param integer $maxPerPage
-     *
-     * @return \Sonata\AdminBundle\Datagrid\Pager
+     * {@inheritdoc}
      */
     public function getPager(array $criteria, $page, $maxPerPage = 10)
     {
@@ -112,9 +102,9 @@ class PostManager extends DoctrineBaseManager
             ;
         } else {
             $query
-                ->leftJoin('p.tags', 't', Expr\Join::WITH, 't.enabled = true')
-                ->leftJoin('p.author', 'a', Expr\Join::WITH, 'a.enabled = true')
-             ;
+                ->leftJoin('p.tags', 't', Join::WITH, 't.enabled = true')
+                ->leftJoin('p.author', 'a', Join::WITH, 'a.enabled = true')
+            ;
         }
 
         if ($criteria['mode'] == 'public') {

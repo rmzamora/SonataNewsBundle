@@ -10,28 +10,9 @@
  */
 namespace Sonata\NewsBundle\Model;
 
-use Sonata\NewsBundle\Model\PostManagerInterface;
+use Sonata\CoreBundle\Model\BaseManager;
 
-abstract class PostManager implements PostManagerInterface
+abstract class PostManager extends BaseManager implements PostManagerInterface
 {
-    /**
-     * @var string
-     */
-    protected $class;
 
-    /**
-     * {@inheritDoc}
-     */
-    public function getClass()
-    {
-        return $this->class;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function create()
-    {
-        return new $this->class;
-    }
 }

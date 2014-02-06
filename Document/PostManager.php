@@ -10,55 +10,31 @@
  */
 namespace Sonata\NewsBundle\Document;
 
-use Sonata\NewsBundle\Model\PostManager as ModelPostManager;
-use Sonata\NewsBundle\Model\PostInterface;
-
+use Doctrine\DBAL\Connection;
 use Sonata\DoctrineMongoDBAdminBundle\Datagrid\Pager;
 use Sonata\DoctrineMongoDBAdminBundle\Datagrid\ProxyQuery;
 
+use Sonata\NewsBundle\Model\PostManager as BasePostManager;
+
 use Doctrine\ODM\MongoDB\DocumentManager;
 
-class PostManager extends ModelPostManager
+class PostManager extends BasePostManager
 {
     /**
-     * @var \Doctrine\ODM\MongoDB\DocumentManager
+     * {@inheritdoc}
      */
-    protected $dm;
-
-    /**
-     * @param \Doctrine\ODM\MongoDB\DocumentManager $dm
-     * @param string                                $class
-     */
-    public function __construct(DocumentManager $dm, $class)
+    public function getConnection()
     {
-        $this->dm    = $dm;
-        $this->class = $class;
+        return $this->om->getConnection();
     }
 
     /**
-     * {@inheritDoc}
-     */
-    public function save(PostInterface $post)
-    {
-        $this->dm->persist($post);
-        $this->dm->flush();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function findOneBy(array $criteria)
-    {
-        return $this->dm->getRepository($this->class)->findOneBy($criteria);
-    }
-
-    /**
-     * @param string $year
-     * @param string $month
-     * @param string $day
-     * @param string $slug
+     * @param $year
+     * @param $month
+     * @param $day
+     * @param $slug
      *
-     * @return \Sonata\NewsBundle\Model\PostInterface|null
+     * @return mixed
      */
     public function findOneBySlug($year, $month, $day, $slug)
     {
@@ -73,30 +49,11 @@ class PostManager extends ModelPostManager
             ->getSingleResult();
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function findBy(array $criteria)
-    {
-        return $this->dm->getRepository($this->class)->findBy($criteria);
-    }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
-    public function delete(PostInterface $post)
-    {
-        $this->dm->remove($post);
-        $this->dm->flush();
-    }
-
-    /**
-     * @param array   $criteria
-     * @param integer $page
-     *
-     * @return \Sonata\AdminBundle\Datagrid\ODM\Pager
-     */
-    public function getPager(array $criteria, $page)
+    public function getPager(array $criteria, $page, $maxPerPage = 10)
     {
         $parameters = array();
         $query = $this->dm->getRepository($this->class)
@@ -132,11 +89,7 @@ class PostManager extends ModelPostManager
     }
 
     /**
-     * @param string $date  Date in format YYYY-MM-DD
-     * @param string $step  Interval step: year|month|day
-     * @param string $alias Table alias for the publicationDateStart column
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function getPublicationDateQueryParts($date, $step, $alias = 'p')
     {
