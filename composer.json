@@ -34,6 +34,7 @@
         "sonata-project/intl-bundle": "~2.1"
     },
     "require-dev": {
+        "friendsofsymfony/rest-bundle": "~1.1",
         "doctrine/orm": "*",
         "rmzamora/doctrine-orm-admin-bundle": "~2.3",
         "rmzamora/block-bundle": "~2.3",
