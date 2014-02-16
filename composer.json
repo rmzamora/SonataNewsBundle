@@ -31,7 +31,11 @@
         "rmzamora/formatter-bundle": "~2.3",
         "rmzamora/classification-bundle": "~2.3",
         "sonata-project/easy-extends-bundle": "~2.1",
-        "sonata-project/intl-bundle": "~2.1"
+        "sonata-project/intl-bundle": "~2.1",
+
+        "friendsofsymfony/rest-bundle": "~1.1",
+        "jms/serializer-bundle": "~0.11",
+        "nelmio/api-doc-bundle": "~2.4"
     },
     "require-dev": {
         "rmzamora/rest-bundle": "~1.2",
@@ -40,9 +44,8 @@
         "rmzamora/notification-bundle": "~2.3"
     },
     "autoload": {
-        "psr-0": { "Sonata\\NewsBundle": "" }
+        "psr-4": { "Sonata\\NewsBundle\\": "" }
     },
-    "target-dir": "Sonata/NewsBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "2.3.x-dev"
