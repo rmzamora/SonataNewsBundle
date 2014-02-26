@@ -4,6 +4,12 @@ Advanced Configuration
 
 .. code-block:: yaml
 
+    sonata_classification:
+        class:
+            collection:     Application\Sonata\ClassificationBundle\Entity\Collection
+            tag:            Application\Sonata\ClassificationBundle\Entity\Tag
+            category:       Application\Sonata\ClassificationBundle\Entity\Category
+            
     sonata_news:
         title:        Sonata Project
         link:         http://sonata-project.org
@@ -20,9 +26,7 @@ Advanced Configuration
 
         class:
             post:       Application\Sonata\NewsBundle\Entity\Post
-            tag:        Application\Sonata\NewsBundle\Entity\Tag
             comment:    Application\Sonata\NewsBundle\Entity\Comment
-            collection:   Application\Sonata\NewsBundle\Entity\Collection
             media:      Application\Sonata\MediaBundle\Entity\Media
             user:       Application\Sonata\UserBundle\Entity\User
 
@@ -54,3 +58,6 @@ Advanced Configuration
                     mappings:
                         ApplicationSonataNewsBundle: ~
                         SonataNewsBundle: ~
+                        
+                        
+    
