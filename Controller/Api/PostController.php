@@ -33,7 +33,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-
 /**
  * Class PostController
  *
@@ -152,7 +151,7 @@ class PostController
      *  output={"class"="Sonata\NewsBundle\Model\Post", "groups"={"sonata_api_read"}},
      *  statusCodes={
      *      200="Returned when successful",
-     *      400="Returned when an error has occured while post creation",
+     *      400="Returned when an error has occurred while post creation",
      *      404="Returned when unable to find post"
      *  }
      * )
@@ -179,7 +178,7 @@ class PostController
      *  output={"class"="Sonata\NewsBundle\Model\Post", "groups"={"sonata_api_read"}},
      *  statusCodes={
      *      200="Returned when successful",
-     *      400="Returned when an error has occured while post update",
+     *      400="Returned when an error has occurred while post update",
      *      404="Returned when unable to find post"
      *  }
      * )
@@ -205,7 +204,7 @@ class PostController
      *  },
      *  statusCodes={
      *      200="Returned when post is successfully deleted",
-     *      400="Returned when an error has occured while post deletion",
+     *      400="Returned when an error has occurred while post deletion",
      *      404="Returned when unable to find post"
      *  }
      * )
@@ -286,14 +285,17 @@ class PostController
         }
 
         $comment = $this->commentManager->create();
-        $comment->setPost($post);
-        $comment->setStatus($post->getCommentsDefaultStatus());
 
         $form = $this->formFactory->createNamed(null, 'sonata_news_api_form_comment', $comment, array('csrf_protection' => false));
         $form->bind($request);
 
         if ($form->isValid()) {
             $comment = $form->getData();
+            $comment->setPost($post);
+
+            if (!$comment->getStatus()) {
+                $comment->setStatus($post->getCommentsDefaultStatus());
+            }
 
             $this->commentManager->save($comment);
             $this->mailer->sendCommentNotification($comment);
