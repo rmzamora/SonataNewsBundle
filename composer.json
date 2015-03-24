@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony SonataNewsBundle, rmzamora forked",
     "keywords": ["blog", "sonata", "news", "post", "rmzamora forked"],
-    "homepage": "http://sonata-project.org/bundles/news",
+    "homepage": "https://sonata-project.org/bundles/news",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
         {
             "name": "Thomas Rabaix",
             "email": "thomas.rabaix@sonata-project.org",
-            "homepage": "http://sonata-project.org"
+            "homepage": "https://sonata-project.org"
         },
         {
             "name": "Sonata Community",
