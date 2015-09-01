@@ -33,7 +33,7 @@
         "rmzamora/datagrid-bundle": "2.5.0.*",
         "sonata-project/easy-extends-bundle": "~2.1",
         "sonata-project/intl-bundle": "~2.1",
-        "jms/serializer-bundle": "~0.11",
+        "jms/serializer-bundle": "~1.1",
         "nelmio/api-doc-bundle": "~2.4",
         "friendsofsymfony/rest-bundle": "~1.1"
 
