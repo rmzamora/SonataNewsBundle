@@ -48,8 +48,8 @@ class NewsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'sonata_news_link_tag_rss' => new \Twig_Function_Method($this, 'renderTagRss', array('is_safe' => array('html'))),
-            'sonata_news_permalink'    => new \Twig_Function_Method($this, 'generatePermalink'),
+            new \Twig_SimpleFunction('sonata_news_link_tag_rss',  'renderTagRss', array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('sonata_news_permalink', 'generatePermalink'),
         );
     }
 
