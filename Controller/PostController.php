@@ -16,6 +16,7 @@ use Sonata\NewsBundle\Model\CommentInterface;
 use Sonata\NewsBundle\Model\CommentManagerInterface;
 use Sonata\NewsBundle\Model\PostInterface;
 use Sonata\NewsBundle\Model\PostManagerInterface;
+use Sonata\SeoBundle\Seo\SeoPageInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -39,7 +40,7 @@ class PostController extends Controller
      * @param array   $parameters
      * @param Request $request
      *
-     * @return Reponse
+     * @return Response
      */
     public function renderArchive(array $criteria = array(), array $parameters = array(), Request $request = null)
     {
