@@ -56,7 +56,5 @@
         "branch-alias": {
             "dev-2.5.0": "2.5.0.x-dev"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
