@@ -282,7 +282,7 @@ class PostController
      *  requirements={
      *      {"name"="id", "dataType"="integer", "requirement"="\d+", "description"="post id"}
      *  },
-     *  input={"class"="sonata_news_api_form_comment", "name"="", "groups"={"sonata_api_write"}},
+     *  input={"class"="sonata.news.api.form.type.comment ", "name"="", "groups"={"sonata_api_write"}},
      *  output={"class"="Sonata\NewsBundle\Model\Comment", "groups"={"sonata_api_read"}},
      *  statusCodes={
      *      200="Returned when successful",
@@ -346,7 +346,7 @@ class PostController
      *      {"name"="postId", "dataType"="integer", "requirement"="\d+", "description"="post identifier"},
      *      {"name"="commentId", "dataType"="integer", "requirement"="\d+", "description"="comment identifier"}
      *  },
-     *  input={"class"="sonata_news_api_form_comment", "name"="", "groups"={"sonata_api_write"}},
+     *  input={"class"="sonata.news.api.form.type.comment ", "name"="", "groups"={"sonata_api_write"}},
      *  output={"class"="Sonata\NewsBundle\Model\Comment", "groups"={"sonata_api_read"}},
      *  statusCodes={
      *      200="Returned when successful",
